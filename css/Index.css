@@ -1,0 +1,33 @@
+body{
+    background-color:  cornflowerblue;
+}
+#contenedor{
+    margin-top: 20%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+#contenedor div{
+    border: 2px #23527c solid;
+    background-color: #337ab7;
+    width: 35%;
+    height: 30%;
+    text-align: center;
+    cursor: pointer;
+}
+#CreadorSecciones{
+    margin-right: 20px;
+}
+#CreadorSecciones:hover{
+    transform:  scale(1.3);
+}
+#Gestion:hover{
+    transform:  scale(1.3);
+}
+.btn{
+    border: 1px solid #23527c!important;
+    border-radius: 21px 21px 21px 21px!important;
+    -moz-border-radius: 21px 21px 21px 21px!important;
+    -webkit-border-radius: 21px 21px 21px 21px!important;
+}

@@ -1,0 +1,329 @@
+/* Prevent the text contents of draggable elements from being selectable. */
+[draggable] {
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    /* Required to make elements draggable in old WebKit */
+    -khtml-user-drag: element;
+    -webkit-user-drag: element;
+}
+body{
+    background-color:  cornflowerblue;
+    display: block!important;
+}
+.div-draggable{
+    border-radius: 21px 21px 21px 21px;
+    -moz-border-radius: 21px 21px 21px 21px;
+    -webkit-border-radius: 21px 21px 21px 21px;
+    position: absolute;
+}
+#Mapa{
+    border: 2px solid #23527c;
+    border-radius: 26px 26px 26px 26px;
+    -moz-border-radius: 26px 26px 26px 26px;
+    -webkit-border-radius: 26px 26px 26px 26px;
+    height: 93%;
+    width: 83%;
+    float: left;
+    background-color: #dce8e8
+}
+#ListaSecciones div{
+    margin-left: 10px;
+}
+#ListaSecciones hr{
+    margin-left: 7px;
+}
+#Secciones{
+    margin-left: 0px!important;
+}
+#Ambitos{
+    margin-left: 0px!important;
+}
+#ListaSecciones{
+    border-left: 2px solid #23527c;
+    height: 93%;
+    width: 15%;
+    float: right;
+}
+.hide-scroll {
+    overflow: hidden;
+}
+.verticalLine {
+    border-left: thick solid #6495ed;
+    height: 93%;
+    width: 0%;
+    float: left;
+}
+.viewport {
+    overflow: scroll;
+    padding-right: 17px;
+    margin-right: -19px;
+    padding-bottom: 21px;
+    margin-bottom: -17px;
+}
+#finalizarSeccion{
+    width: 30%;
+    float: right;
+    margin-top: 5px;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+}
+hr{
+    border: 1px solid #23527c;
+}
+.divGenerico{
+    border: 1px solid #23527c;
+    border-radius: 21px 21px 21px 21px;
+    -moz-border-radius: 21px 21px 21px 21px;
+    -webkit-border-radius: 21px 21px 21px 21px;
+    text-align: center;
+    width: 100%;
+    height: 30px;
+    font-size: 30px;
+    margin-left: 2px;
+}
+.icon-girar{
+    width: 32px;
+    height: 32px;
+    background-image: url(../imagenes/rotate.png);
+    top: -10px;
+    right: -10px;
+    z-index: 95;
+    position: absolute;
+    opacity: 0;
+}
+.icon-girar:hover{
+    opacity: 1;
+}
+.div-girado{
+    font-size: 20px;
+    padding-top: 10px;
+    text-align: left;
+    padding-left: 10px;
+    padding-bottom: 5px;
+    border: 2px dashed #23527c;
+    border-radius: 26px 26px 26px 26px;
+    transform: rotate(-90deg);
+
+}
+.margenesAmbitosGiradas{
+    margin-top: 50px!important;
+    margin-right: -50px!important;
+    margin-bottom: 50px!important;
+    margin-left: -50px!important;
+}
+.wrapDivsSectores{
+    width: 120px;
+    height: 50px;
+    padding-bottom: 5px;
+}
+.interiorWrap{
+    padding: 10px;
+    background-color: white;
+    width: 140px;
+    height: 30px;
+    text-align: left;
+    font-size: 1em;
+    border: 2px dashed #23527c;
+    border-radius: 26px 26px 26px 26px;
+    -moz-border-radius: 26px 26px 26px 26px;
+    -webkit-border-radius: 26px 26px 26px 26px;
+    position: relative;
+}
+.interiorWrapAmbitos{
+    padding: 10px;
+    background-color: white;
+    width: 130px;
+    height: 30px;
+    text-align: center;
+    font-size: 1em;
+    border: 2px dashed #23527c;
+    border-radius: 26px 26px 26px 26px;
+    -moz-border-radius: 26px 26px 26px 26px;
+    -webkit-border-radius: 26px 26px 26px 26px;
+    position: relative;
+}
+.Ambito-draggable{
+    padding-bottom: 10px;
+    padding-top: 10px;
+    text-align: center;
+    font-size: 15px;
+    border: 2px dashed #23527c;
+    border-radius: 26px 26px 26px 26px;
+}
+.divGenerico div:first-child{
+    text-align: center;
+    font-size: 20px;
+    width: 125px;
+    color: black;
+    height: 12%;
+}
+div[id*='-texto']{
+    padding-left: 5px;
+    padding-bottom: 10px;
+    text-align: center;;
+    border: 2px dashed #23527c;
+    border-radius: 26px 26px 26px 26px;
+}
+.Sector-draggable{
+    text-align: left;
+    padding-left: 10px;
+    padding-bottom: 5px;
+    text-align: center;
+    border: 2px dashed #23527c;
+    border-radius: 26px 26px 26px 26px;
+}
+.girar{
+    border: 2px dashed #23527c;
+    border-radius: 26px 26px 26px 26px;
+    width: 120px;
+    transform: rotate(-90deg);
+    height: 50px;
+    width: 120px;
+}
+.mover{
+    cursor: pointer;
+}
+.puntero{
+    cursor: pointer;
+}
+.colocar{
+}
+.over{
+    border: 2px dashed #000!important;
+}
+#Aceptar{
+    background-color: #008000;
+    cursor: pointer;
+    flex: 40%!important;
+    max-width: 40%!important;
+    height: 30px;
+    margin-right: 5px;
+    font-size: 25px;
+}
+#Visualizar{
+    background-color: #003eff;
+    cursor: pointer;
+    flex: 40%!important;
+    max-width: 40%!important;
+    height: 30px;
+    margin-right: 5px;
+    padding-right: 5px;
+    font-size: 25px;
+    padding-left: 5px;
+}
+.selecVisu{
+    -webkit-box-shadow: 0px 0px 18px 6px rgba(0,62,255,1);
+    -moz-box-shadow: 0px 0px 18px 6px rgba(0,62,255,1);
+    box-shadow: 0px 0px 18px 6px rgba(0,62,255,1);
+}
+#Aceptar:hover ,#Visualizar:hover, #Reset:hover,#Atras:hover{
+    transform: scale(1.2);
+}
+.Seleccion:hover{
+    transform: scale(1.02);
+    cursor: pointer ;
+}
+.eliminarSeccion:hover{
+    background-color:  #FF0000;
+}
+.eliminarSeccion{
+    width: 10px;
+    height: 15px;
+    z-index: 3;
+    background-color:  #b7b6b6;
+    color: black;
+    font-size: 15px;
+    float: right;
+    margin-right: 15px;
+    border-radius: 200px 200px 200px 200px;
+    -moz-border-radius: 200px 200px 200px 200px;
+    -webkit-border-radius: 200px 200px 200px 200px;
+    border: 1px solid #23527c;
+    cursor: pointer;
+    text-align: center;
+    position: relative;
+    left: 55px;
+    margin-top: 5px;
+}
+#Anadir{
+    background-color:  #398439;
+    font-weight: bold;
+    height: 5%;
+    margin-top: 7px;
+}
+#Reset{
+    background-color: #808080;
+    cursor: pointer;
+    flex: 40%!important;
+    max-width: 40%!important;
+    height: 30px;
+    font-size: 25px;
+    margin-right: 5px;
+}
+#Titulo{
+    font-size: 15px;
+    border:none;
+    height: 8%!important;
+}
+#Atras{
+    background-color: #c9302c;
+    cursor: pointer;
+    flex: 40%!important;
+    max-width: 40%!important;
+    height: 30px;
+    margin-right: 10px;
+    font-size: 25px;
+}
+.d-none{
+    display: none!important;
+}
+.d-block{
+    display: block!important;
+}
+button[onclick^='eliminarSeccion']{
+    margin-left: 100px;
+}
+.error{
+    background-color:  #FF0000;
+    color: black;
+    font-size: 15px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+.error-shadowBox{
+    -webkit-box-shadow: 1px 1px 0px 8px rgba(255,0,0,1);
+    -moz-box-shadow: 1px 1px 0px 8px rgba(255,0,0,1);
+    box-shadow: 1px 1px 0px 8px rgba(255,0,0,1);
+}
+/*Menu contextual (btn derecho)*/
+#menu{
+    position: absolute;
+    z-index: 101;
+    height: auto;
+    width: 22%;
+    display: none;
+    color: #ffffff;
+    cursor: pointer;
+    background: #000000;
+    border: 2px solid #F0F0F0;
+    filter: alpha(Opacity=80);
+    -khtml-opacity: 0.8;
+    -moz-opacity: 0.8;
+    opacity: 0.8;-webkit-box-shadow: 10px 10px 5px -6px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px -6px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px -6px rgba(0,0,0,0.75);
+    list-style: none;
+}
+#menu li:hover{
+    background-color: #5a5a54;
+}
+#menu li{
+    margin-left: -40px;
+    font-size: 15px;
+    padding-top: 3px;
+    text-align: center;
+    padding-bottom: 3px;
+}

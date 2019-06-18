@@ -1,0 +1,330 @@
+#Principal{
+    text-align: center;
+    margin: 0 auto;
+    max-width: 98%;
+    height: 95%;
+}
+h1{
+    margin-bottom: 1px;
+}
+#seleccion select,#seleccion input{
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+/* Eliminamos la fecha que por defecto aparece en el desplegable */
+#seleccion select::-ms-expand {
+    display: none;
+}
+#seleccion{
+    max-width: 250px;
+    position: relative;
+    padding-left: calc(57% - 200px);
+}
+
+#seleccion select{
+    display: inline-block;
+    width: 100%;
+    cursor: pointer;
+    padding: 7px 10px;
+    height: 42px;
+    outline: 0; 
+    border: 0;
+    border-radius: 0;
+    background: #f0f0f0;
+    color: #7b7b7b;
+    font-size: 1em;
+    color: #999;
+    font-family: 
+        'Quicksand', sans-serif;
+    border:2px solid rgba(0,0,0,0.2);
+    border-radius: 12px;
+    position: relative;
+    transition: all 0.25s ease;
+}
+
+#seleccion select:hover{
+    background: #B1E8CD;
+}
+
+/* 
+Creamos la fecha que aparece a la izquierda del select.
+Realmente este elemento es un cuadrado que sólo tienen
+dos bordes con color y que giramos con transform: rotate(-45deg);
+*/
+#seleccion i{
+    position: absolute;
+    right: 20px;
+    top: calc(50% - 13px);
+    width: 16px;
+    height: 16px;
+    display: block;
+    border-left:4px solid #2AC176;
+    border-bottom:4px solid #2AC176;
+    transform: rotate(-45deg); /* Giramos el cuadrado */
+    transition: all 0.25s ease;
+}
+#seleccion:hover i{
+    margin-top: 3px;
+}
+#atras{
+    background-color: #c9302c;
+    cursor: pointer;
+    width: 70px;
+    height: 30px;
+    margin-right: 10px;
+    font-size: 25px;
+    padding: 3px;
+    border: 1px solid;
+    border-radius: 26px 26px 26px 26px;
+    -moz-border-radius: 26px 26px 26px 26px;
+    -webkit-border-radius: 26px 26px 26px 26px;
+    margin-left: 80%;
+}
+.btn-anadir:hover,#atras:hover{
+    transform: scale(1.1);
+}
+.btn-anadir{
+    background-color: #398439;
+    margin-top: 7px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    border-radius: 26px;
+    font-size: 1.1em;
+    float: right;
+    font-weight: bold;
+    cursor: pointer;
+    border: 1px solid;
+    margin-right: 5%;
+}
+#contenido{
+    max-width: 100%;
+    height: 84%;
+    margin-top: 10px;
+    border: 2px solid whitesmoke;
+    margin-bottom: 10px;
+    overflow: hidden;
+    display: none;
+    border: 1px solid #23527c;
+    border-radius: 21px 21px 21px 21px;
+    -moz-border-radius: 21px 21px 21px 21px;
+    -webkit-border-radius: 21px 21px 21px 21px;
+}
+#interiorContenido{
+    height: 100%;
+    width: 99%;
+    overflow: scroll;
+    padding-right: 30px;
+    padding-bottom: 23px;
+    margin-left: 5px;
+}
+.bloque{
+    display: inline-block;
+    border: 1px solid;
+    width: 60%;
+    height: 10%;
+    font-size: 1.5em;
+    padding-top: 10px;
+    margin-bottom: 2px;
+    border: 1px solid #23527c;
+    border-radius: 21px 21px 21px 21px;
+    -moz-border-radius: 21px 21px 21px 21px;
+    -webkit-border-radius: 21px 21px 21px 21px;
+}
+.AyV{
+    width: 90%!important;
+    height: 13%!important;
+    border: none!important;
+
+}
+.desplegar{
+    float: right;
+    background-image: url(../imagenes/down.png);
+    height: 30px;
+    width: 30px;
+    padding-top: 2%;
+    padding-right: 1%;
+    padding-right: 3%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.cerrar{
+    background-image: url(../imagenes/up.png)!important;
+}
+.bloqueInteriorLeft{
+    float: left;
+    display: inline-flex;
+}
+.bloqueInteriorLeft div:first-child{
+    float: left;
+    width: 25%;
+}
+.bloqueInteriorLeft input:last-child {
+    background-color: transparent;
+    font-size: 22px;
+    width: 350px;
+}
+.bloqueInteriorRigth{
+    height: 30px;
+    width: 30px;
+    background-image: url(../imagenes/delete.png);
+    float: right;
+    margin-right: 5%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.divImgEditar{
+    height: 30px;
+    width: 30px;
+    background-image: url(../imagenes/editar.png);
+    float: left;
+    margin-right: 5%;
+    margin-left: 10%;
+    background-repeat: no-repeat;
+}
+.box-shadow{
+    -webkit-box-shadow: inset 0px 0px 65px 6px rgba(227,32,32,1);
+    -moz-box-shadow: inset 0px 0px 65px 6px rgba(227,32,32,1);
+    box-shadow: inset 0px 0px 65px 6px rgba(227,32,32,1);
+    color:whitesmoke;
+}
+#divBuscador{
+    padding-bottom: 10px;
+    height: 35px;
+    padding-top: 10px;
+
+}
+#buscadorInput{
+    width: 30%;
+    height: 90%;
+    border-radius: 26px;
+    padding-left: 1%;
+}
+.divContenidoAyV{
+    display: inline-block;
+    border: 1px solid;
+    width: 90%;
+    height: 14%;
+    font-size: 1.5em;
+    margin-bottom: 2px;
+    border: 1px solid #23527c;
+    border-radius: 21px 21px 21px 21px;
+    -moz-border-radius: 21px 21px 21px 21px;
+    -webkit-border-radius: 21px 21px 21px 21px;
+    overflow: hidden;
+}
+.divContenidoAyVInter{
+    /*añadir scroll al hacer click en flecha hacia bajo*/
+    overflow: scroll;
+    width: 99%;
+    height: 84%;
+    padding-right: 3%;
+    padding-bottom: 4%;
+}
+.table-variables{
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+}
+.table-variables tr,td{
+    border: 1px solid;
+}
+.table-variables input{
+    width: 100%;
+    background-color: cornflowerblue;
+    border: none;
+}
+div[id*=-table]{
+    height: 100%;
+    padding-left: 2%;
+}
+.btn-variable-anadir{
+    font-size: 1.2em;
+    border-radius: 10px;
+    height: 18px!important;
+    border: 1px solid;
+    padding-bottom: 2px;
+    background-color: green;
+    cursor: pointer;
+    width: 18px;
+}
+.btn-variable-eliminar{
+    height: 30px;
+    width: 30px;
+    transform: scale(0.7);
+    background-image: url(../imagenes/delete.png);
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.hover{
+    background-color: #4880e4;
+}
+
+.td-h{
+    overflow:hidden;
+}
+.textarea-variables{
+    text-align: center;
+    height: 100px;
+    padding-right: 10%;
+    width: 110%;
+    background-color: transparent;
+    border: none;
+    resize: none;
+}
+.textarea-variablesNew{
+    text-align: center;
+    height: 100px;
+    padding-right: 10%;
+    width: 110%;
+    background-color: transparent;
+    border: none;
+    resize: none;
+}
+.readOnly {
+    color: #504a4a;
+}
+.error{
+    -webkit-box-shadow: inset 0px 0px 41px -1px rgba(232,39,39,1);
+    -moz-box-shadow: inset 0px 0px 41px -1px rgba(232,39,39,1);
+    box-shadow: inset 0px 0px 41px -1px rgba(232,39,39,1);
+
+}
+.quitarError{
+    box-shadow: none;
+    transition: all 2s ease-in;
+}
+/*Gestion Documentos*/
+.input-nombre{
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    margin-left: 5%;
+    width: 65%;
+}
+.input-fecha{
+    background-color: transparent;
+    border: none;
+    font-size: 15px;
+    margin-left: 1%;
+    width: 27%;
+}
+.input-tam{
+    background-color: transparent;
+    border: none;
+    font-size: 10px;
+    padding-left: 4%;
+    width: 16%;
+}
+.div-descarga{
+    height: 30px;
+    background-image: url("../imagenes/save.png");
+    float: none;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    margin-right: 0%;
+    width: 5%;
+}

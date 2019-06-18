@@ -1,0 +1,10 @@
+Pasos a Ejecutar para implementar el la aplicación web:
+-Instalar un servidor de apache y MySQL (Por ejemplo XAMPP)
+-Colocar el proyecto en el sitio web del servidor apache utilizado (Ejem: XAMPP => C:\xampp\htdocs)
+-insertar a la base de datos el fichero mapas.sql que se encuentra en ProyectoMinsait\ConexionMysql\mapas.sql
+-Activar los servicios del servidor (Por ejemplo XAMPP) y colocar la siguiente url en el navegador:
+http://Servidor:PuertosDelServidor/ProyectoMinsait/Index.php
+(Ejemplo en servidor XAMPP con puertos cambiados)
+http://localhost:8080/ProyectoMinsait/Index.php
+------------------------------------------------------------------------------------------------------------------
+Aplicación Realizada por Michael Alexander Torres Torres
