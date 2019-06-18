@@ -8,6 +8,6 @@ $stm = $connect->prepare($queryTraerAmbitos);
 //ejecutamos
 $stm->execute();
 while ($datos = $stm->fetch()) {
-    echo "<div class='wrapDivsSectores Seleccion' id='" . $datos['numeracion'] . "'><div class='ambito ui-draggable interiorWrapAmbitos'>" . $datos['ambito'] . "</div></div>";
+    echo "<div class='wrapDivsSectores Seleccion' id='".$datos['numeracion']."'><div class='ambito ui-draggable interiorWrapAmbitos'>" . $datos['ambito'] . "</div></div>";
 }                    
 ?>                  
